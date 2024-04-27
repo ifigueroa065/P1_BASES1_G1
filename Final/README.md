@@ -8,7 +8,11 @@ Primer Semestre 2024
 **Autores:**
 
 **Hugo Sebastian Martínez Hernández       &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        Carné: 202002793**
+
+
 **Katheryn Darleny Yuman Oscal          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        Carné: 201902209**
+
+
 **Isai Figuer Figueroa Farfan          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        Carné: 201904013**
 
 
