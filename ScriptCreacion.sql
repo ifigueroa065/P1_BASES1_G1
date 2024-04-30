@@ -1,7 +1,6 @@
 CREATE DATABASE proymag;
 USE proymag;
 
-
 -- Creacion de Tablas
 CREATE TABLE Pais (
     id_pais INT AUTO_INCREMENT PRIMARY KEY,
@@ -45,17 +44,17 @@ CREATE TABLE PartidoPolitico (
 CREATE TABLE Eleccion (
     id_eleccion INT AUTO_INCREMENT PRIMARY KEY,
     tipo                   VARCHAR(30) NOT NULL,
-    anio                   INT NOT NULL,
-    municipio_id_municipio INT NOT NULL,
-    FOREIGN KEY (municipio_id_municipio) REFERENCES Municipio(id_municipio)
+    anio                   INT NOT NULL
 );
 
 CREATE TABLE PartidoEleccion (
     partido_id INT,
     eleccion_id INT,
+    municipio_id INT NOT NULL,
+    FOREIGN KEY (municipio_id) REFERENCES Municipio(id_municipio),
     FOREIGN KEY (partido_id) REFERENCES PartidoPolitico(id_partidopolitico),
     FOREIGN KEY (eleccion_id) REFERENCES Eleccion(id_eleccion),
-    PRIMARY KEY (partido_id, eleccion_id)
+    PRIMARY KEY (partido_id, eleccion_id, municipio_id)
 );
 
 CREATE TABLE Votante (
@@ -67,6 +66,8 @@ CREATE TABLE Votante (
     votantes_primaria INT,
     votantes_nivelMedio INT,
     votantes_universitarios INT,
+    partido_id INT,
     eleccion_id INT,
-    FOREIGN KEY (eleccion_id) REFERENCES Eleccion(id_eleccion)
+    municipio_id INT,
+    FOREIGN KEY (partido_id, eleccion_id, municipio_id) REFERENCES PartidoEleccion(partido_id, eleccion_id, municipio_id)
 );
